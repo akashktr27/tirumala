@@ -1,173 +1,324 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shobha</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/fontawesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="imgs/icon.png">
-    </head>
-    <body>
-        
-        <nav class="navbar navbar-expand-lg navbar-light text-capitalize">
-            <div class="container">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shobha Travels</title>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
 
-            </div>
-        </nav>
-        
-        <header id="home">
-            <div class="overlay">
-                <div class="container">
-                    <div>
-                        <h1>SHOBHA TRAVELS <br><span>KARWAR</span></h1>
-                        <h3>8762782304</h3>
-                        <h3>9481953787</h3>
-                        <p>Contact us for your memorable journey with best tourism experience since 20+ years</p>
+    section { padding: 80px 0; }
 
-                    </div>
-                </div>
-            </div>
-        </header>
-        
+    /* HERO */
+    header {
+      height: 100vh;
+      background: url('imgs/pic4.jpg') center/cover no-repeat;
+      color: white;
+      position: relative;
+    }
 
-        
-        <div class="services" id="service">
-            <div class="container">
-                <h2 class="text-capitalize">Travel <span>Service</span></h2>
-                <p>The journey of a thousand miles begins with a single step</p>
-            </div>
-            <div class="small-container">
-                <div id="slideToNext" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="imgs/pic4.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="imgs/pic3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="imgs/pic2.jpg" class="d-block w-100" alt="...">
-                    </div>
-                  </div>
-                  <a class="carousel-control-prev" href="#slideToNext" role="button" data-slide="prev">
-                    <i class="fas fa-chevron-left fa-2x"></i>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#slideToNext" role="button" data-slide="next">
-                    <i class="fas fa-chevron-right fa-2x"></i>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-            </div>
+    header::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+
+    .btn-main {
+      background: #ff5a5f;
+      color: white;
+      border-radius: 30px;
+      padding: 12px 25px;
+    }
+
+    /* CARDS */
+    .card-custom {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.3s;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .card-custom:hover {
+      transform: translateY(-10px);
+    }
+
+    /* WHY US */
+    .why-box {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* GALLERY */
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* TESTIMONIAL */
+    .testimonial {
+      background: #f8f9fa;
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    /* CTA */
+    .cta {
+      background: #007bff;
+      color: white;
+      text-align: center;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+  <div class="container hero-content">
+    <h1>SHOBHA TRAVELS KARWAR</h1>
+    <p>20+ Years of Trusted Travel Experience</p>
+    <h4>📞 8762782304 | 9481953787</h4>
+    <a href="#services" class="btn btn-main">Explore Services</a>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container text-center">
+    <h2>Our Services</h2>
+    <p class="mb-5">We provide everything for your perfect trip</p>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card-custom">
+          <img src="imgs/hotel.png" class="service-img">
+          <div class="p-3">
+            <h5>Hotel Booking</h5>
+            <p>Comfortable stays at best prices</p>
+          </div>
         </div>
-        <div class="about-us" id="about">
-            <div class="small-container">
-                <h2 class="text-center">Shobha<span>Tourist</span></h2>
-                <p class="text-center">9481953787, 8762782304</p>
-                <div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6 col-12 text-center">
-                                <div class="item">
-                                    <img src="imgs/img2.jpg">
-                                    <h5 class="text-uppercase">Restaurants</h5>
-                                </div>
-                                <div class="item">
-                                    <img src="imgs/img1.jpg">
-                                    <h5 class="text-uppercase">where to stay</h5>
-                                </div>
-                                <div class="item">
-                                    <img src="imgs/img4.jpg">
-                                    <div>
-                                        <h5 class="text-uppercase">Sightseeing</h5>
-                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <img src="imgs/img3.jpg">
-                                    <h5 class="text-uppercase">shops and boutiques</h5>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-12 text-right">
-                                <h4 class="text-uppercase">Enjoy <span>holiday</span></h4>
-                                <p>Travel gives us our greatest stories, our most cherished memories and countless irreplaceable learnings that we can choose to pay forward to others. It teaches us about ourselves and each other, it broadens our horizons and, just like a reset button, it forces us to refocus on what really matters.</p>
+      </div>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="first"></div>
-                <div class="second"></div>
-            </div>
+      <div class="col-md-4">
+        <div class="card-custom">
+          <img src="imgs/food.png" class="service-img">
+          <div class="p-3">
+            <h5>Food & Restaurants</h5>
+            <p>Best local food experience</p>
+          </div>
         </div>
+      </div>
 
-        
+      <div class="col-md-4">
+        <div class="card-custom">
+          <img src="imgs/sight_seen.png" class="service-img">
+          <div class="p-3">
+            <h5>Sightseeing</h5>
+            <p>Explore Karwar like never before</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        
+<!-- WHY US -->
+<section class="bg-light">
+  <div class="container text-center">
+    <h2>Why Choose Us</h2>
 
-        
-        <footer>
-            <div class="container">
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                </ul>
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="item">
-                            <h4 class="text-uppercase">Contact us</h4>
-                            <p class="address">
-                                Amadalli, Karwar <br>
-                                581324<br>
-                                Karnataka<br>
-                                +91 9481953787
-                            </p>
-                        </div>
-                    </div>
+    <div class="row mt-5">
+      <div class="col-md-4 why-box">
+        <h4>20+ Years Experience</h4>
+        <p>Trusted by thousands of customers</p>
+      </div>
 
-                </div>
-            </div>
+      <div class="col-md-4 why-box">
+        <h4>Affordable Pricing</h4>
+        <p>Best rates guaranteed</p>
+      </div>
 
-        </footer>
-        
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script>
-            $(function () {
-                
-                'use strict';
-                
-                var winH = $(window).height();
-                
-                $('header').height(winH);  
-                
-                $('header .container > div').css('top', (winH / 2) - ( $('header .container > div').height() / 2));
-                
-                $('.navbar ul li a.search').on('click', function (e) {
-                    e.preventDefault();
-                });
-                $('.navbar a.search').on('click', function () {
-                    $('.navbar form').fadeToggle();
-                });
-                
-                $('.navbar ul.navbar-nav li a').on('click', function (e) {
-                    
-                    var getAttr = $(this).attr('href');
-                    
-                    e.preventDefault();
-                    $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
-                });
-            })
-        </script>
-    </body>
+      <div class="col-md-4 why-box">
+        <h4>Local Expertise</h4>
+        <p>We know Karwar inside out</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section>
+  <div class="container text-center">
+    <h2>Popular Destinations</h2>
+
+    <div class="row mt-5">
+      <div class="col-md-3">
+        <img src="imgs/island.png" class="img-fluid destination-img">
+        <h5>Kurumgad Island (Dolphins + Boat Ride)</h5>
+      </div>
+
+      <div class="col-md-3">
+        <img src="imgs/beech.png" class="img-fluid destination-img">
+        <h5>Devbagh</h5>
+      </div>
+
+      <div class="col-md-3">
+        <img src="imgs/yana.png" class="img-fluid destination-img">
+        <h5>Yana Caves</h5>
+      </div>
+
+      <div class="col-md-3">
+        <img src="imgs/murdeshwar.png" class="img-fluid destination-img">
+        <h5>Murdeshwar</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="packages" class="bg-light">
+  <div class="container text-center">
+    <h2>Tour Packages</h2>
+    <p class="mb-5">Spiritual & Leisure Trips from Karwar</p>
+
+    <div class="row">
+
+      <!-- Dharmasthala -->
+      <div class="col-md-3 mb-4">
+        <div class="card-custom">
+          <img src="imgs/Dharmasthala.jpg" class="service-img">
+          <div class="p-3">
+            <h5>Dharmasthala</h5>
+            <p>📍 Karwar → Dharmasthala</p>
+            <p>🕐 5 Day Trip</p>
+            <button class="btn btn-main">Call Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sringeri -->
+      <div class="col-md-3 mb-4">
+        <div class="card-custom">
+          <img src="imgs/Vidyashankara_Temple_at_Shringeri.jpg" class="service-img">
+          <div class="p-3">
+            <h5>Sringeri</h5>
+            <p>📍 Karwar → Sringeri</p>
+            <p>🕐 6 Days</p>
+            <button class="btn btn-main">Call Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hornadu -->
+      <div class="col-md-3 mb-4">
+        <div class="card-custom">
+          <img src="imgs/horanadu-annapoorneshwari.jpg" class="service-img">
+          <div class="p-3">
+            <h5>Hornadu</h5>
+            <p>📍 Karwar → Hornadu</p>
+            <p>🕐 6 Days</p>
+            <button class="btn btn-main">Call Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goa -->
+      <div class="col-md-3 mb-4">
+        <div class="card-custom">
+          <img src="imgs/subtle-night-lights-for.jpg" class="service-img">
+          <div class="p-3">
+            <h5>Goa Trip</h5>
+            <p>📍 Karwar → Goa</p>
+            <p>🕐 1 Day / Weekend</p>
+            <button class="btn btn-main">Call Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery bg-light">
+  <div class="container text-center">
+    <h2>Gallery</h2>
+
+    <div class="row mt-4">
+      <div class="col-md-4"><img src="imgs/pic4.jpg"></div>
+      <div class="col-md-4"><img src="imgs/pic2.jpg"></div>
+      <div class="col-md-4"><img src="imgs/pic3.jpg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section>
+  <div class="container text-center">
+    <h2>What Our Customers Say</h2>
+
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p>"Best travel experience in Karwar!"</p>
+          <strong>- Ravi</strong>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p>"Very professional and friendly service."</p>
+          <strong>- Sneha</strong>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="testimonial">
+          <p>"Highly recommend Shobha Travels."</p>
+          <strong>- Arjun</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Plan Your Trip Today</h2>
+    <p>Call us now and make your journey unforgettable</p>
+    <a href="tel:8762782304" class="btn btn-main">Call Now</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>📍 Amadalli, Karwar - 581324</p>
+  <p>© 2026 Shobha Travels</p>
+</footer>
+
+</body>
 </html>
